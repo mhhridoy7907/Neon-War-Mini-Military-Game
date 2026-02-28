@@ -1,0 +1,68 @@
+body{
+  margin:0;
+  overflow:hidden;
+  background:#05070d;
+  font-family:Orbitron, sans-serif;
+}
+
+canvas{
+  display:block;
+  margin:0 auto;
+  border:2px solid #00ffc8;
+  box-shadow:0 0 25px #00ffc8;
+  background:#070b14;
+}
+
+/* UI */
+#score{
+  position:absolute;
+  top:15px;
+  left:20px;
+  color:#00ffc8;
+  font-size:26px;
+  text-shadow:0 0 10px #00ffc8;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.6}
+}
+
+#gameOverScreen{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#ff3c3c;
+  font-size:42px;
+  letter-spacing:2px;
+  display:none;
+  animation:fadeIn .6s ease;
+}
+
+#playAgainBtn{
+  margin-top:25px;
+  padding:12px 26px;
+  font-size:20px;
+  border:none;
+  border-radius:6px;
+  background:#00ffc8;
+  color:#000;
+  cursor:pointer;
+  box-shadow:0 0 15px #00ffc8;
+  transition:.25s;
+}
+
+#playAgainBtn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #00ffc8;
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
